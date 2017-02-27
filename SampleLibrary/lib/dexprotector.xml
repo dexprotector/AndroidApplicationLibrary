@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<dexprotector>
+    <verbose>true</verbose>
+    <optimize>false</optimize>
+    <signMode>release</signMode>
+    <stringEncryption mode="all">
+	  <filters>	
+	      <filter><![CDATA[glob:com/dexprotector/aar/lib/internal/**]]></filter>
+          <filter><![CDATA[glob:com/dexprotector/aar/lib/**]]></filter>
+	 </filters>
+    </stringEncryption>
+    <hideAccess mode="all">
+        <filters>
+            <filter><![CDATA[glob:com/dexprotector/aar/lib/internal/**]]></filter>
+            <filter><![CDATA[glob:com/dexprotector/aar/lib/**]]></filter>
+        </filters>
+    </hideAccess>
+    <classEncryption mode="all">
+        <filter><![CDATA[glob:com/dexprotector/aar/lib/internal/**]]></filter>
+    </classEncryption>
+    <resourceEncryption mode="all" nameObfuscation="on">
+    </resourceEncryption>
+    <nativeLibraryEncryption>
+        <filters>
+            <filter>*.so</filter>
+        </filters>
+    </nativeLibraryEncryption>
+    <jniObfuscation/>
+    <aar>
+	   <initMethod>com.dexprotector.aar.lib.SayHelloWorld.init</initMethod>
+    </aar>
+    <detect>
+        <trace>9</trace>
+        <root>
+            <positiveCheckCallback>com.dexprotector.aar.lib.SayHelloWorld.positiveRootCheck</positiveCheckCallback>
+            <negativeCheckCallback>com.dexprotector.aar.lib.SayHelloWorld.negativeRootCheck</negativeCheckCallback>
+            <probeMethod>com.dexprotector.aar.lib.SayHelloWorld.doProbe</probeMethod>
+        </root>
+        <debug>
+            <positiveCheckCallback>com.dexprotector.aar.lib.SayHelloWorld.positiveDebugCheck</positiveCheckCallback>
+            <negativeCheckCallback>com.dexprotector.aar.lib.SayHelloWorld.negativeDebugCheck</negativeCheckCallback>
+            <probeMethod>com.dexprotector.aar.lib.SayHelloWorld.doProbe</probeMethod>
+        </debug>
+        <emulator>
+            <positiveCheckCallback>com.dexprotector.aar.lib.SayHelloWorld.positiveEmulatorCheck</positiveCheckCallback>
+            <negativeCheckCallback>com.dexprotector.aar.lib.SayHelloWorld.negativeEmulatorCheck</negativeCheckCallback>
+            <probeMethod>com.dexprotector.aar.lib.SayHelloWorld.doProbe</probeMethod>
+        </emulator>
+    </detect>
+</dexprotector>
