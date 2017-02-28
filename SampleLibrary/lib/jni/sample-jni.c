@@ -18,7 +18,7 @@
 #include <jni.h>
 
 jstring
-Java_com_dexprotector_aar_lib_internal_NativeSayHelloWorldImpl_sayHelloWorld( JNIEnv* env,
+Java_com_dexprotector_aar_lib_internal_NativeSayHelloWorldImpl_sayHelloWorldJNI( JNIEnv* env,
                                                   jobject thiz )
 {
     return (*env)->NewStringUTF(env, "Hello from JNI !");

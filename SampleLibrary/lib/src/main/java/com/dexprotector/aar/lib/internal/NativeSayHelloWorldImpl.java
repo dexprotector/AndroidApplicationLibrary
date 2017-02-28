@@ -11,6 +11,10 @@ public class NativeSayHelloWorldImpl extends SayHelloWorld {
         System.loadLibrary("sample-jni");
     }
 
+	private native String sayHelloWorldJNI();
+
     @Override
-    public native String sayHelloWorld();
+    public String sayHelloWorld(){
+    	return sayHelloWorldJNI();
+    }
 }
