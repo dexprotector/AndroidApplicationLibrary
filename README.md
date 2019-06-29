@@ -1,3 +1,5 @@
+DexProtector (https://dexprotector.com) is one of the **pioneers** in **mobile application and library shielding**. It protects and obfuscates Android and iOS applications and libraries. Our solution helps you to secure your code and assets against unauthorized or illegal use, tampering, reverse engineering, and cracking.
+
 # AndroidApplicationLibrary
  This sample is to demonstrate how the AAR protection works
 ## Description
