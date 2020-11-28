@@ -30,6 +30,7 @@
 	   <initMethod>com.dexprotector.aar.lib.SayHelloWorld.init</initMethod>
     </aar>
     <detect>
+	<!-- for debugging purposes only -->    
         <trace>9</trace>
         <root>
             <positiveCheckCallback>com.dexprotector.aar.lib.SayHelloWorld.positiveRootCheck</positiveCheckCallback>
